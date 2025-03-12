@@ -5,3 +5,22 @@
 	height:800px;
 	margin:0 auto;
 }
+
+header {
+	height:100px;
+	background-color:#cccccc;
+}
+
+.contents {
+	height:500px;
+}
+
+.contents > .user-box {
+	width:400px;
+	background-color:#cccccc;
+}
+
+footer{
+	height:70px;
+	background-color:#cccccc;
+}
