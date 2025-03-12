@@ -8,3 +8,7 @@ spring:
         url: jdbc:mysql://localhost:3306/memo_ryu
         username: root
         password: ${mysql.password}
+    thymeleaf:
+        cache: false
+    mvc:
+        static-path-pattern: /static/**
