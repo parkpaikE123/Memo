@@ -5,7 +5,7 @@ spring:
         name: Memo
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/memo_ryu
+        url: jdbc:mysql://localhost:3306/memo-ryu
         username: root
         password: ${mysql.password}
     thymeleaf:
@@ -13,4 +13,4 @@ spring:
     mvc:
         static-path-pattern: /static/**
 mybatis:
-    mapper-location: mappers/*Mapper.xml
+    mapper-locations: mappers/*Mapper.xml

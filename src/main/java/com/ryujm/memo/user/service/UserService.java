@@ -3,6 +3,7 @@ package com.ryujm.memo.user.service;
 import org.springframework.stereotype.Service;
 
 import com.ryujm.memo.common.MD5HashingEncoder;
+import com.ryujm.memo.user.domain.User;
 import com.ryujm.memo.user.repository.UserRepository;
 
 @Service
@@ -33,5 +34,17 @@ public class UserService {
 		}
 		
 	}
+	
+	public User getUser(String loginId, String password) {
+		
+		String decryptPassword = MD5HashingEncoder.encode(password);
+		
+		return userRepository.selectUser(loginId, decryptPassword);
+		
+	}
+	
+	
+	
+	
 	
 }
