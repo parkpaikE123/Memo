@@ -13,4 +13,4 @@ spring:
     mvc:
         static-path-pattern: /static/**
 mybatis:
-    mapper-locations: mappers/*Mapper.xml
+    mapper-locations: mappers/*Mapper.xml 
