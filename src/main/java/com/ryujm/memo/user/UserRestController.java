@@ -28,10 +28,10 @@ public class UserRestController {
 	// 회원 가입 API
 	@PostMapping("/join")
 	public Map<String, String> join(
-				@RequestParam("loginId") String loginId
-				, @RequestParam("password") String password
-				, @RequestParam("name") String name
-				, @RequestParam("email") String email) {
+				@RequestParam String loginId
+				, @RequestParam String password
+				, @RequestParam String name
+				, @RequestParam String email) {
 		
 		Map<String, String> resultMap = new HashMap<>();
 		
@@ -47,8 +47,8 @@ public class UserRestController {
 	
 	// 로그인 API
 	@PostMapping("/login")
-	public Map<String, String> login(@RequestParam("loginId") String loginId
-			, @RequestParam("password") String password
+	public Map<String, String> login(@RequestParam String loginId
+			, @RequestParam String password
 			, HttpServletRequest request) {
 		User user = userService.getUser(loginId, password);
 		
