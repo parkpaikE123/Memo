@@ -10,10 +10,13 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class FileManager {
 
+	public static final String FILE_UPLOAD_PATH = "D:\\jung20241114\\project\\upload\\memo";
 	// 파일 저장 기능
 	public static String saveFile(int userId, MultipartFile file) {
 		
-		String fileUploadPath = "D:\\jung20241114\\project\\upload\\memo";
+		if(file == null) {
+			return null;
+		}
 		
 		// 파일 이름 유지
 		// 폴더를 생성해서 파일을 저장
@@ -25,7 +28,7 @@ public class FileManager {
 		String directoryName = "/" + userId + "_" + System.currentTimeMillis();
 		
 		// 디렉토리 (폴더) 만들기
-		String directoryPath = fileUploadPath + directoryName;
+		String directoryPath = FILE_UPLOAD_PATH + directoryName;
 		
 		File directory = new File(directoryPath);
 		

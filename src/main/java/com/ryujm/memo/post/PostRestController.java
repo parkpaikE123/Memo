@@ -28,7 +28,7 @@ public class PostRestController {
 	@PostMapping("/create")
 	public Map<String, String> createMemo(@RequestParam String title
 					,@RequestParam String contents
-					, @RequestParam MultipartFile imageFile
+					, @RequestParam(required=false) MultipartFile imageFile
 					, HttpSession session) {
 		
 		int userId = (Integer)session.getAttribute("userId");
