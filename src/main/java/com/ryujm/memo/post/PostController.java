@@ -23,7 +23,6 @@ public class PostController {
 		this.postService = postService;
 	}
 	
-	
 	@GetMapping("/list-view")
 	public String memoList(
 						Model model
@@ -34,7 +33,6 @@ public class PostController {
 		List<Post> postList = postService.getPostList(userId);
 		
 		model.addAttribute("postList" , postList);
-		
 		
 		return "/post/list";
 	}
