@@ -63,7 +63,6 @@ public class FileManager {
 		// /images/5_1432352/test.png
 		
 		return "/images" + directoryName + "/" + file.getOriginalFilename();
-				
 	}
 	
 }
